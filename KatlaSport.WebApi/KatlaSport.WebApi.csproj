@@ -188,6 +188,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductStoreController.cs" />
+    <Compile Include="Controllers\ProductStoreRequestController.cs" />
     <Compile Include="CustomFilters\CustomExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -224,6 +225,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\ProductStoreRequests\" />
     <Folder Include="Views\ProductStore\" />
   </ItemGroup>
   <ItemGroup>

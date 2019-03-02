@@ -2,6 +2,8 @@
 using AutoMapper;
 using DataAccessProduct = KatlaSport.DataAccess.ProductCatalogue.CatalogueProduct;
 using DataAccessProductCategory = KatlaSport.DataAccess.ProductCatalogue.ProductCategory;
+using DataAccessProductStore = KatlaSport.DataAccess.ProductStore.StoreItem;
+using DataAccessProductStoreRequest = KatlaSport.DataAccess.ProductStore.StoreItemRequest;
 
 namespace KatlaSport.Services.ProductManagement
 {
@@ -12,6 +14,9 @@ namespace KatlaSport.Services.ProductManagement
             CreateMap<DataAccessProductCategory, ProductCategory>();
             CreateMap<DataAccessProductCategory, ProductCategoryListItem>();
             CreateMap<DataAccessProduct, ProductCategoryProductListItem>();
+
+            CreateMap<DataAccessProductStore, ProductStoreListItem>();
+            CreateMap<DataAccessProductStoreRequest, ProductStoreItemRequest>();
 
             CreateMap<DataAccessProduct, Product>()
                 .ForMember(li => li.Description, opt => opt.MapFrom(p => p.Description == null ? string.Empty : p.Description))
@@ -25,6 +30,9 @@ namespace KatlaSport.Services.ProductManagement
 
             CreateMap<UpdateProductRequest, DataAccessProduct>()
                 .ForMember(r => r.LastUpdated, opt => opt.MapFrom(p => DateTime.UtcNow));
+
+            CreateMap<UpdateRequestRequest, DataAccessProductStoreRequest>()
+                .ForMember(r => r.Completed, opt => opt.MapFrom(p => false));
         }
     }
 }

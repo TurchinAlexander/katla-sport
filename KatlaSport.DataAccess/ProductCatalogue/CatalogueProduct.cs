@@ -78,5 +78,10 @@ namespace KatlaSport.DataAccess.ProductCatalogue
         /// Gets or sets a collection of items for the product.
         /// </summary>
         public virtual ICollection<StoreItem> Items { get; set; }
+
+        /// <summary>
+        /// Gets or sets a collection of item requests for the product.
+        /// </summary>
+        public virtual ICollection<StoreItemRequest> Requests { get; set; }
     }
 }
