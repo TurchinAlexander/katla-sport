@@ -3,16 +3,16 @@
   <table class="table table-nonfluid">
     <thead>
       <th scope="col">#</th>
-      <th scope="col">Code</th>
-      <th scope="col">Name</th>
+      <th scope="col">Product Id</th>
+      <th scope="col">Product Name</th>
       <th scope="col">Quantity</th>
       <th scope="col"></th>
     </thead>
     <tbody>
       <tr *ngFor="let storeProduct of storeProducts">
         <th scope="row">{{storeProduct.id}}</th>
-        <td>{{storeProduct.product.code}}</td>
-        <td>{{storeProduct.product.name}}</td>
+        <td>{{storeProduct.productId}}</td>
+        <td>{{resolveProductName(storeProduct.productId)}}</td>
         <td>{{storeProduct.quantity}}</td>
         <td>
           

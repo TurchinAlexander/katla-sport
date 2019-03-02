@@ -11,9 +11,14 @@
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets product.
+        /// Gets or sets the product id.
         /// </summary>
-        public Product Product { get; set; }
+        public int ProductId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the hive section id.
+        /// </summary>
+        public int HiveSectionId { get; set; }
 
         /// <summary>
         /// Gets or sets a quantity of product.
