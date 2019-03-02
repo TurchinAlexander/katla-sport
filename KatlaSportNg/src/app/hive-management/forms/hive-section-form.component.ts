@@ -22,12 +22,12 @@ export class HiveSectionFormComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(p => {
       if (p["id"] === undefined) {
-        this.hiveSection.storeHiveId = p['store-hive-id'];
+        this.hiveSection.storeHiveId = p['hiveId'];
         return;
       }
       this.hiveSectionService.getHiveSection(p["id"]).subscribe(hs => {
         this.hiveSection = hs;
-        this.hiveSection.storeHiveId = p['store-hive-id'];
+        this.hiveSection.storeHiveId = p['hiveId'];
       });
       this.existed = true;
     })
